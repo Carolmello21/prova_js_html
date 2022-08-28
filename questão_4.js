@@ -19,24 +19,3 @@ function substituir(){
   document.getElementById("lista").innerHTML = lista;
   }
 
-function createAlert(msg) {
-  document
-    .querySelector("body")
-    .insertAdjacentHTML("beforebegin", `<div class='alert'>${msg}</div>`);
-
-  setTimeout(function () {
-    deleteAlert();
-  }, 3000);
-}
-
-function deleteAlert() {
-  const list = document.querySelectorAll(".alert");
-  for (const item of list) {
-    item.remove();
-  }
-}
-
-$form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  substituir();
-});
